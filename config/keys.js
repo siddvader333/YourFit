@@ -1,3 +1,6 @@
 module.exports = {
-	mongoURI: 'mongodb+srv://YourFitDev:Ee0CQX0NLJzeK3zB@yourfit-bt6xn.mongodb.net/test?retryWrites=true&w=majority'
+	mongoURI:
+		'mongodb+srv://YourFitDev:' +
+		encodeURIComponent('yohNtsBTfqdvWag2') +
+		'@yourfit-bt6xn.mongodb.net/YourFit-dev?retryWrites=true&w=majority'
 };
