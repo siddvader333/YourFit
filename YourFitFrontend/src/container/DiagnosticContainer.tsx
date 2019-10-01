@@ -51,7 +51,7 @@ export default class DiagnosticContainer extends Component<{}, DiagnosticContain
         });
 
         if (DiagnosticSteps[nextIndex].stepName === "FINAL_STEP") { 
-            fetch('/diagnostic/complete');
+            fetch('/api/diagnostic/complete');
         }
 
     }
