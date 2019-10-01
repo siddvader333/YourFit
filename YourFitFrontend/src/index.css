@@ -12,6 +12,9 @@ code {
 .primary {
 	color: #fe6b8b;
 }
+.link {
+	color: #fe6b8b;
+}
 .link:hover {
 	text-decoration: none;
 	font-weight: bolder;

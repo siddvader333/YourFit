@@ -97,15 +97,15 @@ export default class LoginContainer extends Component<{}, LoginContainerState> {
 				<SignInButton onClick={this.LoginSubmitHandler} displayText="Sign-in" />
 				<div className="login-small-text">
 					Forgot your{' '}
-					<a href="" onClick={() => { history.push('/forgot_password')}} className="primary link">
+					<span  onClick={() => { history.push('/forgot_password')}} className="primary link">
 						password?
-					</a>
+					</span>
 				</div>
 				<div className="login-small-text">
 					Need to{' '}
-					<a href="" onClick={() => { history.push('/register')}} className="primary link">
+					<span onClick={() => { history.push('/register')}} className="primary link">
 						Register?
-					</a>
+					</span>
 				</div>
 			</div>
 		);

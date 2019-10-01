@@ -93,7 +93,7 @@ export default class RegistrationContainer extends Component<{}, RegistrationCon
 				<SignInInput style={style} onChange ={this.OnChangeHandler} type="password" placeholder="Password"/>
                 <SignInInput style={style} onChange ={this.OnChangeHandler} type="password" placeholder="Confirm Password"/>
 				<SignInButton onClick={this.RegisterSubmitHandler} displayText="Sign-up"/>
-				<div className="login-small-text">Have an account? <a href="" onClick={() => { history.push('/login')}} className="link primary">Login.</a></div>
+				<div className="login-small-text">Have an account? <span onClick={() => { history.push('/login')}} className="link primary">Login.</span></div>
 			</div>
 		);
 	}
