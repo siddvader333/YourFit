@@ -1,0 +1,33 @@
+{
+	"name": "YourFit",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"server": "nodemon index.js",
+		"client": "npm run start --prefix YourFitFrontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "cd YourFitFrontend && npm install && npm run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/react-router": "^5.0.3",
+		"bcryptjs": "^2.4.3",
+		"concurrently": "^4.1.2",
+		"cors": "^2.8.5",
+		"email-validator": "^2.0.4",
+		"express": "^4.17.1",
+		"express-session": "^1.16.2",
+		"express-validator": "^6.2.0",
+		"history": "^4.9.0",
+		"mongoose": "^5.6.13",
+		"nodemon": "^1.19.3",
+		"npm": "^6.11.3",
+		"passport": "^0.4.0",
+		"passport-local": "^1.0.0",
+		"typescript": "^3.6.3"
+	}
+}

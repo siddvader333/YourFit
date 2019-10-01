@@ -1,0 +1,32 @@
+.diagnostic-continue-button {
+	border-radius: 50%;
+	width: 12vh;
+	height: 12vh;
+	margin-right: 20%;
+	margin-left: 70%;
+	color: rgb(124, 124, 124);
+
+	opacity: 0.85;
+	border-radius: 500px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+.diagnostic-continue-button:active,
+.diagnostic-continue-button:focus {
+	outline: none;
+}
+
+button[data-disabled=false]:hover {
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	border: none;
+	opacity: 1.0;
+}
+@media only screen and (min-width: 800px) {
+	.diagnostic-continue-button {
+		margin-right: 15%;
+		margin-left: 70%;
+	}
+}

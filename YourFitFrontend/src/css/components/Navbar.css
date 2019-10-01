@@ -1,0 +1,24 @@
+.navbar {
+	border-bottom: 0.1vh solid #fe6b8b;
+	height: 12vh;
+	padding-bottom: 2vh;
+}
+
+.navbar-title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
+	width: 30%;
+	margin-top: 1.5vh;
+	font-size: 5vh;
+	font-weight: lighter;
+	color: #fe6b8b;
+}
+
+@media only screen and (min-width: 800px) {
+	.navbar-title {
+		width: 15%;
+		font-size: 5vh;
+		font-weight: lighter;
+		color: #fe6b8b;
+	}
+}

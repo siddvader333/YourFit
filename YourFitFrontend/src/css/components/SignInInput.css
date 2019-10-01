@@ -1,0 +1,10 @@
+.sign-in-input{
+    width: 60%;
+    margin: 2.5vh 20% 2.5vh 20%;
+    padding-left: 5%;
+    border: none;
+    border-bottom: 0.1vh solid rgb(179, 177, 177);
+  }
+  .sign-in-input:active, .sign-in-input:focus{
+    outline:none;
+  }
