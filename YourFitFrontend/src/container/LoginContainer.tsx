@@ -52,12 +52,12 @@ export default class LoginContainer extends Component<{}, LoginContainerState> {
 
 		if (this.state.inputValidity) {
 			document.cookie = "isLoggedIn=true";
-			const response = await fetch('/api/diagnostic/isCompleted');
+			const response = await fetch('/diagnostic/isCompleted');
 			const responseJSON = await response.json();
 			if (responseJSON) {
 				history.push('/logged_in');
 			} else { 
-				history.push('/diagnostic');
+				history.push('/diagnostic_test');
 			}
 		}
 
@@ -97,13 +97,13 @@ export default class LoginContainer extends Component<{}, LoginContainerState> {
 				<SignInButton onClick={this.LoginSubmitHandler} displayText="Sign-in" />
 				<div className="login-small-text">
 					Forgot your{' '}
-					<a onClick={this.LogOutHandler} className="primary link" href='/forgot_password'>
+					<a onClick={() => { history.push('/forgot_password')}} className="primary link">
 						password?
 					</a>
 				</div>
 				<div className="login-small-text">
 					Need to{' '}
-					<a className="primary link" href="/register">
+					<a onClick={() => { history.push('/register')}} className="primary link">
 						Register?
 					</a>
 				</div>

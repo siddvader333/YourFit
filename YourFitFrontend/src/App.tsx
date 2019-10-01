@@ -14,7 +14,7 @@ const App: React.FC = () => {
 			<Route path="/register" component={RegistrationContainer}/>
 			<Route path="/forgot_password" component={ForgotPasswordContainer}/>
 			<Route path="/logged_in" component={UserDashboardContainer} />
-			<Route path="/diagnostic" component={DiagnosticContainer}/>
+			<Route path="/diagnostic_test" component={DiagnosticContainer}/>
 			<Route component={LoginContainer}/>
 		</Switch>
 	);

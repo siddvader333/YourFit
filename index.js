@@ -10,11 +10,12 @@ const keys = require('./config/keys');
 /* Express middle ware */
 const app = express();
 require('./services/passport')(passport);
-app.use(express.static(path.join(__dirname, '/YourFitFrontend/build')));
 
-app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname + '/YourFitFrontend/build/index.html'));
-});
+app.use(express.static(path.join(__dirname, 'YourFitFrontend/build')));
+//
+/*app.get('*', (req, res) => {
+		res.sendfile(path.join((__dirname = 'YourFitFrontend/build/index.html')));
+	});*/
 
 mongoose
 	.connect(keys.mongoURI, { useNewUrlParser: true })
