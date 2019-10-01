@@ -61,8 +61,8 @@ export default class RegistrationContainer extends Component<{}, ForgotPasswordC
                 </div>: null}
                 <SignInInput style={style} onChange ={this.OnChangeHandler} type="text" placeholder="Email"/>
 				<SignInButton onClick={this.RegisterSubmitHandler} displayText="Confirm"/>
-				<div className="login-small-text">Have an account? <a onClick={() => { history.push('/login')}} className="link primary">Login.</a></div>
-                <div className="login-small-text">Need to <a className="primary link" onClick={() => { history.push('/register')}}>Register?</a></div>
+				<div className="login-small-text">Have an account? <a href="" onClick={() => { history.push('/login')}} className="link primary">Login.</a></div>
+                <div className="login-small-text">Need to <a href="" className="primary link" onClick={() => { history.push('/register')}}>Register?</a></div>
 			</div>
 		);
 	}
