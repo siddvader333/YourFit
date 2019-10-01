@@ -54,7 +54,7 @@ export default class RegistrationContainer extends Component<{}, RegistrationCon
 		if(this.state.inputValidity){
     		setTimeout(() => {
       			history.push('/login');
-    		}, 3000);
+    		}, 2000);
 		}
 	}
 	OnChangeHandler(e: any): void {

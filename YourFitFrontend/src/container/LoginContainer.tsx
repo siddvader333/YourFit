@@ -52,7 +52,7 @@ export default class LoginContainer extends Component<{}, LoginContainerState> {
 
 		if (this.state.inputValidity) {
 			document.cookie = "isLoggedIn=true";
-			const response = await fetch('/diagnostic/isCompleted');
+			const response = await fetch('/api/diagnostic/isCompleted');
 			const responseJSON = await response.json();
 			if (responseJSON) {
 				history.push('/logged_in');

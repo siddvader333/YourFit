@@ -26,17 +26,17 @@ module.exports = (app) => {
 			return;
 		}
 		passport.authenticate('local', {
-			successRedirect: '/users/login_success',
-			failureRedirect: '/users/login_failure'
+			successRedirect: '/login_success',
+			failureRedirect: '/login_failure'
 		})(req, res);
 	});
 
-	app.get('/users/login_success', (req, res) => {
+	app.get('/login_success', (req, res) => {
 		const response = { loginStatus: true, errorMessage: '' };
 		res.send(response);
 	});
 
-	app.get('/users/login_failure', (req, res) => {
+	app.get('/login_failure', (req, res) => {
 		const response = { registerStatus: false, errorMessage: 'An error occured. Make sure login info is correct.' };
 		res.send(response);
 	});

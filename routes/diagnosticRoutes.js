@@ -1,6 +1,6 @@
 module.exports = (app) => {
 	const User = require('../models/User');
-	app.get('/diagnostic/complete', (req, res) => {
+	app.get('/api/diagnostic/complete', (req, res) => {
 		User.findOneAndUpdate({ email: req.user.email }, { diagnosticComplete: true }, { new: true }, (err, doc) => {
 			if (err) {
 				console.log('Something wrong when updating data!');
@@ -9,7 +9,7 @@ module.exports = (app) => {
 		});
 	});
 
-	app.get('/diagnostic/isCompleted', (req, res) => {
+	app.get('/api/diagnostic/isCompleted', (req, res) => {
 		User.findOne({ email: req.user.email }).then((user) => {
 			res.send(user.diagnosticComplete);
 		});
