@@ -8,7 +8,6 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
 .primary {
 	color: #fe6b8b;
 }
@@ -85,8 +84,41 @@ code {
 	margin-bottom: 4vh;
 }
 .some-image {
-	width: auto;
-	height: 50vh;
+	width: 100%;
+	height: auto;
+	max-height: 55vh;
+}
+.dashboard-content-container {
+	width: 80%;
+	height: 84vh;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 2vh;
+	margin-top: 2vh;
+	border: 1px red solid;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1149px) {
+	.dashboard-content-container {
+		width: 70%;
+		height: 84vh;
+		margin-left: 27.5%;
+		margin-right: 2.5%;
+		margin-bottom: 2vh;
+		margin-top: 2vh;
+		border: 1px red solid;
+	}
+}
+@media only screen and (min-width: 1150px) {
+	.dashboard-content-container {
+		width: 78%;
+		height: 84vh;
+		margin-left: 19.5%;
+		margin-right: 2.5%;
+		margin-bottom: 2vh;
+		margin-top: 2vh;
+		border: 1px red solid;
+	}
 }
 @media only screen and (min-width: 800px) {
 	.login-container {

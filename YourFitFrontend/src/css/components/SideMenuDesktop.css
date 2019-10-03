@@ -1,0 +1,112 @@
+.side-menu-container {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	opacity: 1.0;
+	padding-top: 5vh;
+	padding-bottom: 10vh;
+	position: fixed;
+	z-index: 1000;
+	text-align: right;
+}
+
+.side-menu-container-close {
+	width: 100%;
+	height: 5vh;
+	padding-right: 10%;
+	color: white;
+	font-size: 3vh;
+	cursor: pointer;
+}
+
+.side-menu-item {
+	height: 17vh;
+	font-size: 3vh;
+	padding-top: 7vh;
+	font-weight: 180;
+	color: #fe6b8b;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0);
+}
+.side-menu-item:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+	border-radius: 5%;
+	font-weight: 230;
+}
+
+.side-menu-title {
+	height: 12vh;
+	font-size: 5vh;
+	font-weight: 200;
+	color: white;
+	text-align: center;
+}
+@media only screen and (max-width: 799px) {
+	div[data-on-screen="false"] {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1149px) {
+	.side-menu-container-close {
+		display: none;
+	}
+	.side-menu-container {
+		height: 100vh;
+		width: 25%;
+		float: left;
+		border-top: 0px;
+		padding-top: 5vh;
+		padding-bottom: 10vh;
+		background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+		opacity: 0.9;
+		position: relative;
+		z-index: 0;
+	}
+
+	.side-menu-item {
+		height: 17vh;
+		font-size: 3vh;
+		padding-top: 7vh;
+		font-weight: 180;
+		color: #fe6b8b;
+		text-align: center;
+		color: white;
+		background: rgba(0, 0, 0, 0);
+	}
+
+	.side-menu-item:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		cursor: pointer;
+		border-radius: 5%;
+		font-weight: 230;
+	}
+
+	.side-menu-title {
+		height: 12vh;
+		font-size: 5vh;
+		font-weight: 200;
+		color: white;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 1150px) {
+	.side-menu-container-close {
+		display: none;
+	}
+	.side-menu-container {
+		height: 100vh;
+		width: 17%;
+		float: left;
+		border-top: 0px;
+		padding-top: 5vh;
+		padding-bottom: 10vh;
+		background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+		opacity: 0.9;
+		position: relative;
+		z-index: 1;
+	}
+}
