@@ -10,16 +10,16 @@ const SideMenu = (props: any) => {
              <div className="side-menu-title">
                 <p className="side-menu-title-text">YourFit</p>
             </div>
-            <div className="side-menu-item">
+            <div className="side-menu-item hvr-underline-from-center">
                 <p className="side-menu-item-text">Weekly Selection</p>
             </div>
-            <div className="side-menu-item">
+            <div className="side-menu-item hvr-underline-from-center">
                 <p className="side-menu-item-text">Random Selection</p>
             </div>
-            <div className="side-menu-item">
+            <div className="side-menu-item hvr-underline-from-center">
                 <p className="side-menu-item-text">My Saved Pieces</p>
             </div>
-            <div className="side-menu-item">
+            <div className="side-menu-item hvr-underline-from-center">
                 <p className="side-menu-item-text">My Profile</p>
             </div>
       </div>
