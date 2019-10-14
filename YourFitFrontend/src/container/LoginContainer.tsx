@@ -87,7 +87,9 @@ export default class LoginContainer extends Component<{}, LoginContainerState> {
             return <></>;
         }
 		return (
-			<div className="login-container"> 
+			<div data-aos="fade-up"
+				data-aos-duration="1500"
+				className="login-container"> 
 				<div className="login-title">Login</div>
 				<div className="login-error-text">
 					{displayMessage}

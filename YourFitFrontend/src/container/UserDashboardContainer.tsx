@@ -4,6 +4,8 @@ import history from '../history';
 import SignInButton from '../components/SignInButton';
 import Navbar from '../components/Navbar';
 import SideMenu from '../components/SideMenuDesktop';
+import SaveOutfitButton from '../components/SaveOutfitButton';
+import HamburgerButton from "../components/HamburgerButton";
 
 /*
  * UserDashboardContainerState maintains the state of the login page
@@ -34,7 +36,8 @@ export default class UserDashboardContainer extends Component<{}, UserDashboardC
 
         this.LogoutHandler = this.LogoutHandler.bind(this);
         this.UserHandler = this.UserHandler.bind(this);
-        this.closeMenu = this.closeMenu.bind(this);
+         this.closeMenu = this.closeMenu.bind(this);
+         this.openMenu = this.openMenu.bind(this);
     }
 
     async IsAuth(): Promise<boolean>{
@@ -63,12 +66,17 @@ export default class UserDashboardContainer extends Component<{}, UserDashboardC
             const current_user = await fetch('/users/current');
 			const userJson = await current_user.json();
             this.setState({
-                user: userJson.email,
-                mobileMenuIsOpen: true
+                user: userJson.email
             });
         }
     }
 
+    openMenu() {
+        this.setState({
+            mobileMenuIsOpen: true
+        }); 
+
+    }
     closeMenu() { 
         this.setState({
             mobileMenuIsOpen: false
@@ -81,8 +89,8 @@ export default class UserDashboardContainer extends Component<{}, UserDashboardC
         }
         return (
             <>
-                <SideMenu closeMenu={this.closeMenu} onScreen={this.state.mobileMenuIsOpen}/>
-                <Navbar displayText="" />
+            {this.state.mobileMenuIsOpen ? <SideMenu onScreen={this.state.mobileMenuIsOpen} closeMenu={this.closeMenu}/>: null}
+                <Navbar menuToggle={this.openMenu}simplified={false} displayText="YourFit" /> 
                  <div className="dashboard-content-container">
                     {this.state.user}
                     <div>
@@ -95,3 +103,18 @@ export default class UserDashboardContainer extends Component<{}, UserDashboardC
 
     }
 };
+
+/*<SideMenu onScreen={this.state.mobileMenuIsOpen} closeMenu={this.closeMenu}/> 
+
+                 <div className="dashboard-content-container">
+                    {this.state.user}
+                    <div>
+                        <SignInButton onClick={this.LogoutHandler} displayText="Logout"/>
+                        <SignInButton onClick={this.UserHandler} displayText="Get current user" />
+                        <SaveOutfitButton onClick={() => { console.log('click') }}/>
+                        <img className="some-image"src="https://d22g7rdlsqssaf.cloudfront.net/737151.png"/>
+                    </div>
+                </div>
+
+
+*/

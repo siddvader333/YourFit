@@ -83,7 +83,9 @@ export default class RegistrationContainer extends Component<{}, RegistrationCon
 			}: null;
 		const displayMessage = (this.state.inputValidity) ? `${this.state.message}` : `Sorry an error occured. ${this.state.message}`;
 		return (
-			<div className="register-container"> 
+			<div data-aos="fade-up"
+				data-aos-duration="1500"
+				className="register-container"> 
 				<div className="register-title">Register</div>
 				<div className="login-error-text">
 					{displayMessage}

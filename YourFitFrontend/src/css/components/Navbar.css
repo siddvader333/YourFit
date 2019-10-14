@@ -1,3 +1,36 @@
+.hvr-underline-from-center {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+	width: 11%;
+}
+.hvr-underline-from-center:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 51%;
+	right: 51%;
+	bottom: 0;
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	height: 4px;
+	-webkit-transition-property: left, right;
+	transition-property: left, right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+	left: 26%;
+	right: 26%;
+}
+
 .navbar {
 	height: 12vh;
 	padding-bottom: 2vh;
@@ -12,13 +45,45 @@
 	font-weight: lighter;
 	color: #fe6b8b;
 	margin-left: 5%;
+	margin-right: 20%;
+	float: left;
 }
-
+.navbar-link-div {
+	display: none;
+}
 @media only screen and (min-width: 800px) {
 	.navbar-title {
 		width: 15%;
 		font-size: 5vh;
 		font-weight: lighter;
+		margin-right: 5%;
 		color: #fe6b8b;
+		float: none;
+		margin-top: 1vh;
+	}
+	.navbar-link:hover {
+		font-weight: normal;
+		cursor: pointer;
+	}
+
+	.navbar-link-div {
+		display: block;
+		margin-top: 1.5vh;
+		font-size: 2vh;
+		font-weight: lighter;
+		color: #fe6b8b;
+		width: 11%;
+		height: 5vh;
+		margin-left: 1.37%;
+		margin-right: 1.37%;
+		text-align: center;
+		border: 1px solid #fe6b8b;
+		border-radius: 3px;
+		padding-bottom: 0vh;
+		padding-top: 1vh;
+		cursor: pointer;
+	}
+	.navbar-link-div:hover {
+		cursor: pointer;
 	}
 }

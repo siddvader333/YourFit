@@ -84,40 +84,35 @@ code {
 	margin-bottom: 4vh;
 }
 .some-image {
-	width: 100%;
-	height: auto;
-	max-height: 55vh;
+	max-height: 50vh;
 }
 .dashboard-content-container {
-	width: 80%;
+	width: 95%;
 	height: 84vh;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 	margin-bottom: 2vh;
 	margin-top: 2vh;
-	border: 1px red solid;
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1149px) {
 	.dashboard-content-container {
-		width: 70%;
+		width: 95%;
 		height: 84vh;
-		margin-left: 27.5%;
+		margin-left: 2.5%;
 		margin-right: 2.5%;
 		margin-bottom: 2vh;
 		margin-top: 2vh;
-		border: 1px red solid;
 	}
 }
 @media only screen and (min-width: 1150px) {
 	.dashboard-content-container {
-		width: 78%;
+		width: 95%;
 		height: 84vh;
-		margin-left: 17%;
+		margin-left: 2.5%;
 		margin-right: 2.5%;
 		margin-bottom: 2vh;
 		margin-top: 2vh;
-		border: 1px red solid;
 	}
 }
 @media only screen and (min-width: 800px) {

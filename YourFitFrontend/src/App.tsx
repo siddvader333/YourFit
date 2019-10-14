@@ -6,9 +6,11 @@ import ForgotPasswordContainer from "./container/ForgotPasswordContainer";
 import UserDashboardContainer from "./container/UserDashboardContainer";
 import { Switch, Route} from 'react-router';
 import DiagnosticContainer from './container/DiagnosticContainer';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 const App: React.FC = () => {
 	document.cookie = "isLoggedIn=false";
+	AOS.init();
 	return (
 		<Switch>
 			<Route path="/register" component={RegistrationContainer}/>

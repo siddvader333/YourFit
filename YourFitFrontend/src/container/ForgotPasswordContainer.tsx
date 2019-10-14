@@ -51,7 +51,9 @@ export default class RegistrationContainer extends Component<{}, ForgotPasswordC
         };
         console.log(this.state.inputValidity);
 		return (
-			<div className="register-container"> 
+			<div data-aos="fade-up"
+                data-aos-duration="1500"
+                className="register-container"> 
 				<div className="register-title">Forgot Password?</div>
                 {this.state.inputValidity ? null: <div className="login-error-text">
                     Sorry, an error occured. Make sure you entered a valid email.
